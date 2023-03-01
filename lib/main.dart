@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Instagram Clone',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.dark(),
       ),
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),

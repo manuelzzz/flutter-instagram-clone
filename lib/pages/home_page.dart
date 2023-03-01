@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desafio/widgets/bottom_bar.dart';
+import 'package:flutter_desafio/widgets/stories.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -54,49 +56,13 @@ class _HomePageState extends State<HomePage> {
               width: .03,
             ),
           )),
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            iconSize: 25,
-            backgroundColor: Colors.black,
-            items: [
-              BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    Icons.home_outlined,
-                    color: Colors.white,
-                  )),
-              BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    Icons.search_sharp,
-                    color: Colors.white,
-                  )),
-              BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    Icons.add_box_outlined,
-                    color: Colors.white,
-                  )),
-              BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    Icons.camera_alt_outlined,
-                    color: Colors.white,
-                  )),
-              BottomNavigationBarItem(
-                  label: '',
-                  icon: Icon(
-                    Icons.account_circle_sharp,
-                    color: Colors.white,
-                  )),
-            ],
-          ),
+          child: BottomBar(),
         ),
       ),
-      body: Container(
-        color: Colors.black,
+      body: ListView(
+        children: [
+          Stories(),
+        ],
       ),
     );
   }

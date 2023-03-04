@@ -37,11 +37,12 @@ class BottomBar extends StatelessWidget {
               color: Colors.white,
             )),
         BottomNavigationBarItem(
-            label: '',
-            icon: Icon(
-              Icons.account_circle_sharp,
-              color: Colors.white,
-            )),
+          label: '',
+          icon: Icon(
+            Icons.account_circle_sharp,
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }

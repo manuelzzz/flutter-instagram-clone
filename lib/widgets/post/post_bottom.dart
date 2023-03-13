@@ -9,6 +9,7 @@ class PostBottom extends StatefulWidget {
 
 class _PostBottomState extends State<PostBottom> {
   bool isLiked = false;
+  bool isSaved = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +43,20 @@ class _PostBottomState extends State<PostBottom> {
           onPressed: () {},
           icon: Icon(Icons.send_outlined),
         ),
-        Expanded(child: SizedBox(),),
+        Expanded(
+          child: SizedBox(),
+        ),
         IconButton(
           alignment: Alignment.bottomCenter,
           iconSize: 25,
           enableFeedback: false,
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              isSaved = !isSaved;
+            });
+          },
           icon: Icon(
-            Icons.bookmark_border_rounded,
+            isSaved ? Icons.bookmark : Icons.bookmark_border_rounded,
           ),
         )
       ],
